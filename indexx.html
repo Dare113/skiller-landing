@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKILLER - Basketball Streetwear</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            background: url(https://imgur.com/a/2r6KYHO) no-repeat center center/cover;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: url(https://source.unsplash.com/1600x900/?basketball) no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
         }
         .container {
             max-width: 500px;
@@ -23,10 +23,6 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             border-radius: 12px;
             color: white;
-        }
-        .logo {
-            width: 200px;
-            margin-bottom: 10px;
         }
         h1 {
             font-size: 32px;
@@ -42,7 +38,7 @@
         }
         input[type="email"] {
             padding: 12px;
-            width: 80%;
+            width: calc(100% - 24px);
             border: none;
             border-radius: 5px;
             font-size: 16px;
@@ -66,14 +62,15 @@
 </head>
 <body>
     <div class="container">
-        <img src=https://imgur.com/a/2r6KYHO alt="SKILLER Logo" class="logo">
         <h1>SKILLER - Basketball Streetwear</h1>
         <p>Limited-edition hoodies & t-shirts designed for elite players. Be the first to get access to our first drop.</p>
         <p>Sign up now and get <strong>early access + exclusive discounts</strong>.</p>
-        <form class="email-form">
-            <input type="email" placeholder="Enter your email" required>
+        <form class="email-form" action="submit-form.php" method="POST">
+            <label for="email">Enter your email:</label>
+            <input id="email" type="email" placeholder="Enter your email" required>
             <button type="submit">Notify Me</button>
         </form>
     </div>
 </body>
 </html>
+
